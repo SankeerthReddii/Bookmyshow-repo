@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BOOK MY SHOW</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .logo{
+            height: 3.5vh;
+            margin: 2px 50px 2px;
+            background-color: white;
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 100%;
+        }
+        .left{
+            height: 8vh;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            text-align: center;
+            margin-left: 190px;
+        }
+        .right{
+            height: 3.5vh;
+            grid-row: 1/2;
+            grid-column: 2/3;
+            display: flex;
+            justify-content: flex-end;
+            gap: 30px;
+            margin-top: 30px;
+            margin-right: 190px;
+        }
+        #id1{
+            margin-top: 50px;
+        }
+        .section{
+            height: 3.5vh;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            padding: 30px;
+            background-color: white;
+            display: grid;
+            grid-template-columns: 60% 40%;
+            grid-template-rows: 100%;
+            gap: 10px;
+        }
+        .left1{
+            margin-left: 10%;
+            height: 3.5vh;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            text-align: center;
+        }
+        .right1{
+            margin-right: 20%;
+            height: 3.5vh;
+            grid-column: 2/3;
+            grid-row: 1/2;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            text-align: center;
+        }
+        .list{
+            height: 50vh;
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            grid-template-rows: 80% 10% 10%;
+            gap: 10px;
+            box-sizing: border-box;
+        }
+        .movie1{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        .movie2{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+        .movie3{
+            grid-column: 3/4;
+            grid-row: 1/2;
+        }
+        .movie4{
+            grid-column: 4/5;
+            grid-row: 1/2;
+        }
+        .movie5{
+            grid-column: 5/6;
+            grid-row: 1/2;
+        }
+        .mname1{
+            background-color: black;
+            grid-column: 1/2;
+            grid-row: 2/3;
+            margin-top: 82px;
+            text-align: center;
+        }
+        .mname2{
+            background-color: black;
+            grid-column: 2/3;
+            grid-row: 2/3;
+            margin-top: 82px;
+            text-align: center;
+        }
+        .mname3{
+            background-color: black;
+            grid-column: 3/4;
+            grid-row: 2/3;
+            margin-top: 82px;
+            text-align: center;
+        }
+        .mname4{
+            background-color: black;
+            grid-column: 4/5;
+            grid-row: 2/3;
+            margin-top: 82px;
+            text-align: center;
+        }
+        .mname5{
+            background-color: black;
+            grid-column: 5/6;
+            grid-row: 2/3;
+            margin-top: 82px;
+            text-align: center;
+        }
+        .gener1{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .gener2{
+            grid-column: 2/3;
+            grid-row: 3/4;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .gener3{
+            grid-column: 3/4;
+            grid-row: 3/4;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .gener4{
+            grid-column: 4/5;
+            grid-row: 3/4;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .gener5{
+            grid-column: 5/6;
+            grid-row: 3/4;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .stream{
+            margin-top: 180px;
+            margin-left: 10%;
+        }
+        .book{
+            margin-top: 30px;
+            margin-left: 10%;
+        }
+        .event{
+            display: flex;
+            justify-content: space-between;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 20px;
+        }
+        .premiere{
+            background-color: rgb(43, 49, 72);
+        }
+        .play{
+            margin-left: 10%;
+            color: white;
+        }
+        .c1{
+            margin-top: 0px;
+            margin-bottom: 50px;
+            margin-left: 2%;
+        }
+        .c11{
+            display: flex;
+        }
+        .z1:hover{
+            color: red;
+            border: 2px dotted red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="logo">
+            <div class="left">
+                <img style="margin-top: 30px;" src="bookshow.png" alt="ERROR" width="150px" height="60px">
+                <input id="id1" type="search" name="search" placeholder="search for movies, shows, events and more over" width="250px">
+            </div>
+            <div class="right">
+                <select name="city" class="city">
+                    <option value="Hyd">Hyderabad</option>
+                    <option value="chn">Chennai</option>
+                    <option value="Mub">Mumbai</option>
+                    <option value="Del">Delhi</option>
+                </select>
+                <button class="signin" name="signin">Sign-In</button>
+
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+        <div class="section">
+            <div class="left1">
+                <p>Movies</p>
+                <p>Shows</p>
+                <p>Events</p>
+                <p>Plays</p>
+                <p>Sports</p>
+                <p>Activities</p>
+            </div>
+            <div class="right1">
+                <p>ListYourShow</p>
+                <p>Corporates</p>
+                <p>Offers</p>
+                <p>Gift Cards</p>
+            </div>
+        </div>
+        <div class="newrelease">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/events/et00388631-ggemjdwujm-landscape.jpg" alt="ERROR" width="100%" height="400px">
+        </div>
+        <h1>Recommended Movies</h1>
+        <div class="list">
+            <div class="movie1"> <img src="https://cdn.gulte.com/wp-content/uploads/2024/01/Vijay-Thalapathy-The-GOAT-683x1024.jpeg" alt="ERROR" width="300px"></div>
+            <div class="mname1"><p><i class="fa fa-star">7.9/10 169k votes</i></p></div>
+            <div class="movie2"><img src="https://m.media-amazon.com/images/M/MV5BYWI3NjZmZmUtNTYzNi00NWFhLWI4NzktYjcxY2MwMTNlMmEyXkEyXkFqcGdeQXVyMTQ4MTg3Njcx._V1_.jpg" alt="Error" width="300px"></div>
+            <div class="mname2"><p><i class="fa fa-star">9/10 86.4k votes</i></p></div>
+            <div class="movie3"><img src="https://th-i.thgim.com/public/incoming/nepjb0/article68331300.ece/alternates/FREE_1200/35-FirstLook-Unveiled%20by%20Rana%20Daggubati-Telugu.jpg" alt="ERROR" width="300px" height="450px"></div>
+            <div class="mname3"><p><i class="fa fa-star">9.2/10 5.5k votes</i></p></div>
+            <div class="movie4"> <img src="https://m.media-amazon.com/images/M/MV5BZTEyYzVjYjEtNWYzZi00NWRhLTgyZjUtNDlkZjBiNWIxYTEwXkEyXkFqcGc@._V1_.jpg" alt="ERROR" width="300px"></div>
+            <div class="mname4"><p><i class="fa fa-star">8.9/10 337k votes</i></p> </div>
+            <div class="movie5"> <img src="https://deadline.com/wp-content/uploads/2024/07/BTLBTL_VERT_MAIN_2764x4096_DOM_REV.jpg?w=800" alt="ERROR" width="300px"></div>
+            <div class="mname5"><p><i class="fa fa-star">7.6/10 588 votes</i></p></div>
+            <div class="gener1"><h3>The Greatest Of All Time</h3><p>Action/Drama/Thriller</p></div>
+            <div class="gener2"><h3>Saripodha Shanivaram</h3><p>Action/Drama</p></div>
+            <div class="gener3"><h3>35(2024)</h3><p>Drama/Family/Kids</p></div>
+            <div class="gener4"><h3>Stree2: sarkate ka aatank</h3><p>Comedy/Horror</p></div>
+            <div class="gener5"><h3>beetlejuice beetlejuice</h3><p>Comedy/Horror/Fantasy</p></div>
+        </div>
+        <div class="stream">
+            <img src="BMS-Stream.png" alt="EROOR" width="85%" height="100px">
+        </div>
+        <div class="book">
+            <img src="book.png" alt="ERROR" width="85%" height="100px">
+        </div>
+        <h1>Recommended Movies</h1>
+        <div class="list">
+            <div class="movie1"> <img src="https://cdn.gulte.com/wp-content/uploads/2024/01/Vijay-Thalapathy-The-GOAT-683x1024.jpeg" alt="ERROR" width="300px"></div>
+            <div class="mname1"><p><i class="fa fa-star">7.9/10 169k votes</i></p></div>
+            <div class="movie2"><img src="https://m.media-amazon.com/images/M/MV5BYWI3NjZmZmUtNTYzNi00NWFhLWI4NzktYjcxY2MwMTNlMmEyXkEyXkFqcGdeQXVyMTQ4MTg3Njcx._V1_.jpg" alt="Error" width="300px"></div>
+            <div class="mname2"><p><i class="fa fa-star">9/10 86.4k votes</i></p></div>
+            <div class="movie3"><img src="https://th-i.thgim.com/public/incoming/nepjb0/article68331300.ece/alternates/FREE_1200/35-FirstLook-Unveiled%20by%20Rana%20Daggubati-Telugu.jpg" alt="ERROR" width="300px" height="450px"></div>
+            <div class="mname3"><p><i class="fa fa-star">9.2/10 5.5k votes</i></p></div>
+            <div class="movie4"> <img src="https://m.media-amazon.com/images/M/MV5BZTEyYzVjYjEtNWYzZi00NWRhLTgyZjUtNDlkZjBiNWIxYTEwXkEyXkFqcGc@._V1_.jpg" alt="ERROR" width="300px"></div>
+            <div class="mname4"><p><i class="fa fa-star">8.9/10 337k votes</i></p> </div>
+            <div class="movie5"> <img src="https://deadline.com/wp-content/uploads/2024/07/BTLBTL_VERT_MAIN_2764x4096_DOM_REV.jpg?w=800" alt="ERROR" width="300px"></div>
+            <div class="mname5"><p><i class="fa fa-star">7.6/10 588 votes</i></p></div>
+            <div class="gener1"><h3>The Greatest Of All Time</h3><p>Action/Drama/Thriller</p></div>
+            <div class="gener2"><h3>Saripodha Shanivaram</h3><p>Action/Drama</p></div>
+            <div class="gener3"><h3>35(2024)</h3><p>Drama/Family/Kids</p></div>
+            <div class="gener4"><h3>Stree2: sarkate ka aatank</h3><p>Comedy/Horror</p></div>
+            <div class="gener5"><h3>beetlejuice beetlejuice</h3><p>Comedy/Horror/Fantasy</p></div>
+        </div>
+        <div class="stream">
+            <img src="BMS-Stream.png" alt="EROOR" width="85%" height="100px">
+        </div>
+        <h1 style="margin-left: 155px;">The Best Of Live Events</h1>
+        <div class="event">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/bmshp-desktop-amusement-park-collection-202404190106.png" alt="ERROR" width="200px" height="200px">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/workshop-and-more-web-collection-202211140440.png" alt="Error" width="200px" height="200px">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-MTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/bmshp-desktop-kids-collection-202404190106.png" alt="ERROR" width="200px" height="200px">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-OTArIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/comedy-shows-collection-202211140440.png" alt="ERROR" width="200px" height="200px">
+            <img src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-800,h-800:l-text,ie-NTUrIEV2ZW50cw%3D%3D,co-FFFFFF,ff-Roboto,fs-64,lx-48,ly-320,tg-b,pa-8_0_0_0,l-end:w-300/music-shows-collection-202211140440.png" alt="Error" width="200px" height="200px">
+        </div>
+        <div class="premiere">
+            <img style="" src="https://assets-in.bmscdn.com/discovery-catalog/collections/tr:w-1440,h-120/premiere-banner-web-collection-202208191200.png" alt="ERROR" width="100%" height="110px">
+            <div style="background-color: rgb(43, 49, 72); color: white;">
+                <h1 style="margin-left: 155px;">Premieres</h1>
+                <p style="margin-left: 155px;">Brand New Releases Every Friday</p>
+                <img style="margin-left: 8%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00387070-mqkqrqvnda-portrait.jpg" alt="ERROR" width="250px" height="380px">
+                <img style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00391759-vedxluegjg-portrait.jpg" alt="ERROR" width="250px" height="380px">
+                <img style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00044194-ctjsqzmqbb-portrait.jpg" alt="ERROR" width="250px" height="380px">
+                <img style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00386198-djlavllwqy-portrait.jpg" alt="ERROR" width="250px" height="380px">
+                <img style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:l-image,i-discovery-catalog@@icons@@bms_premiere_v1.png,t-false,lfo-bottom_left,l-end/et00409744-fjgesznshx-portrait.jpg" alt="ERROR" width="250px" height="380px">
+                <h3 style="display: inline-block; margin-left: 140px;">TWISTERS </h3>
+                <h3 style="display: inline-block; margin-left: 175px;">THE CHAPEL</h3>
+                <h3 style="display: inline-block; margin-left: 175px;">JONNY LLB 2</h3>
+                <h3 style="display: inline-block; margin-left: 170px;">IMMACULATE</h3>
+                <h3 style="display: inline-block; margin-left: 150px;">BIGGER</h3>
+            </div>
+        </div>
+        <div>
+                <h2 style="margin-left: 155px;">Your Music Studio</h2>
+                <img width="250px" height="380px" style="margin-left: 8%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyNiBPY3Q%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00408441-pqywjhrnnd-portrait.jpg" alt="error">
+                <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyMSBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00406098-ddjwcwudln-portrait.jpg" alt="error">
+                <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCA5IE5vdg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00408130-wgvrgbxanc-portrait.jpg" alt="error">
+                <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyMCBPY3Q%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00394924-cysdnpqtkp-portrait.jpg" alt="error">
+                <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCA4IE1hcg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00409511-bvzxscbjgj-portrait.jpg" alt="error">
+                <h3 style="display: inline-block; margin-left: 140px; width: 15%;margin-top: 2px;">THE ONE ARTIST 2024 - Jasleen Royal <p style="color: gray; font-weight: 100;">Gachibowli Stadium Hyderabad</p></h3>
+                <h3 style="display: inline-block; margin-left: 28px; width: 15%;">Papon Live in Concert - Hyderabad <p style="color: gray; font-weight: 100;">Ananda Convention Hyderabad</p></h3>
+                <h3 style="display: inline-block; margin-left: 40px; width: 15%;">karthik Live Presented by Prism Outdoors <p style="color: gray; font-weight: 100;">Boulder Hills: Hyderabad</p></h3>
+                <h3 style="display: inline-block; margin-left: 38px; width: 15%;">Alan Walker India Tour - Hyderabad <p style="color: gray; font-weight: 100;">Venue to be announced</p></h3>
+                <h3 style="display: inline-block; margin-left: 30px; width: 15%;">Lollapalooza <p style="color: gray; font-weight: 100;">maharaja indoor stadium Mumbai Concert</p></h3>
+        </div>
+        <div>
+            <h2 style="margin-left: 155px;">Outdoor Events</h2>
+            <img width="250px" height="380px" style="margin-left: 8%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyMSBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00409755-jgkladszqw-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCAxMSBTZXAgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00343461-wfpumfnryt-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyOSBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00408093-mktwxtrate-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyOSBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00376688-qdpesegfpe-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCAxMSBTZXAgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00402180-ppvdjtdgrh-portrait.jpg" alt="error">
+            <h3 style="display: inline-block; margin-left: 140px; width: 15%;margin-top: 2px;">Sagar waali Qawwali - Live<p style="color: gray; font-weight: 100;">Illuzion club & kitchen</p></h3>
+            <h3 style="display: inline-block; margin-left: 28px; width: 15%;">Snow kingdom Hyderabad <p style="color: gray; font-weight: 100;">Snow Kingdom: Hyderabad</p></h3>
+            <h3 style="display: inline-block; margin-left: 40px; width: 15%;">Pink Power Run <p style="color: gray; font-weight: 100;">Gachibowli Stadium Ground</p></h3>
+            <h3 style="display: inline-block; margin-left: 38px; width: 15%;">HUMARE RAM Ft Ashutosh <p style="color: gray; font-weight: 100;">Shilpakala vedika</p></h3>
+            <h3 style="display: inline-block; margin-left: 30px; width: 15%;">Ramoji Film City Hyderabad <p style="color: gray; font-weight: 100;">Ramoji Fiml City: Hyderabad</p></h3>
+        </div>
+        <div>
+            <h2 style="margin-left: 155px;">Laughter Therapy</h2>
+            <img width="250px" height="380px" style="margin-left: 8%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAxNSBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00405644-buuztjrbws-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCAxMSBTZXAgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00410778-zyevkmtuyc-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAxOSBPY3Q%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00355125-wvlzfmqeej-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCA5IE5vdiBvbndhcmRz,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00393085-kvcyqwdlcj-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAxNyBOb3Y%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00350454-gggngzlrnc-portrait.jpg" alt="error">
+            <h3 style="display: inline-block; margin-left: 140px; width: 15%;margin-top: 2px;">Read Between The Lines by Naveen Richards<p style="color: gray; font-weight: 100;">District 150: Hyderabad</p></h3>
+            <h3 style="display: inline-block; margin-left: 28px; width: 15%;">Thrive-in-some comedy <p style="color: gray; font-weight: 100;">Thrivesome: cafe,Studio: Hyderabad</p></h3>
+            <h3 style="display: inline-block; margin-left: 40px; width: 15%;">Kisi ko Batana Mat Ft. Anubhav Singh Bassi<p style="color: gray; font-weight: 100;">Shilpakala vedika</p></h3>
+            <h3 style="display: inline-block; margin-left: 38px; width: 15%;">The Dropout Story Ft. Haseeb khan<p style="color: gray; font-weight: 100;">The Comedy Theater: Hyderabad</p></h3>
+            <h3 style="display: inline-block; margin-left: 30px; width: 15%;">Chaman Chatora by Gaurav Kapoor <p style="color: gray; font-weight: 100;">Heart Cup Coffee: Hyderabad</p></h3>
+        </div>
+        <div>
+            <h2 style="margin-left: 155px;">Popular Events</h2>
+            <img width="250px" height="380px" style="margin-left: 8%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyMyBOb3Y%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00406791-lldewqrhws-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAyMSBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00409755-jgkladszqw-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U2F0LCAxNCBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00409691-nakmzrqhyb-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAxNSBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00402708-jscfmbnwlb-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCA4IE5vdg%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00401642-rffxxjcjzp-portrait.jpg" alt="error">
+            <h3 style="display: inline-block; margin-left: 140px; width: 15%;margin-top: 2px;">BandLand 2024 powered by TUBORG<p style="color: gray; font-weight: 100;">Nice Grounds BIEC: Bengaluru</p></h3>
+            <h3 style="display: inline-block; margin-left: 28px; width: 15%;">Sagar waali Qawwali - Live At Illuzion<p style="color: gray; font-weight: 100;">Illuzion club & kitchen</p></h3>
+            <h3 style="display: inline-block; margin-left: 40px; width: 15%;">The Commercial Nights Live Ft. Dj Ajay <p style="color: gray; font-weight: 100;">Hard Rock Cafe: Hyderabad</p></h3>
+            <h3 style="display: inline-block; margin-left: 38px; width: 15%;">Capitive Soul by Korolova - Hyderabad<p style="color: gray; font-weight: 100;">Odeum by prism: Hyderabad</p></h3>
+            <h3 style="display: inline-block; margin-left: 30px; width: 15%;">Prateek Kuhad Silhouettes <p style="color: gray; font-weight: 100;">Hyderabad International Convention Center</p></h3>
+        </div>
+        <div>
+            <h2 style="margin-left: 155px;">The Latest Plays</h2>
+            <img width="250px" height="380px" style="margin-left: 8%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyOSBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00376688-qdpesegfpe-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAxNSBTZXAgb253YXJkcw%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00371711-qzctsjqgwg-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyMiBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00403216-rkkgvkxbry-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCAyMCBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00409974-umfwvalqea-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-RnJpLCA4IE5vdiBvbndhcmRz,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00409203-yvaardewlf-portrait.jpg" alt="error">
+            <h3 style="display: inline-block; margin-left: 140px; width: 15%;margin-top: 2px;">HUMARE RAM Ft Ashutosh Rana and Rahull<p style="color: gray; font-weight: 100;">Hindi</p></h3>
+            <h3 style="display: inline-block; margin-left: 28px; width: 15%;">Anaganaga<p style="color: gray; font-weight: 100;">Telugu/English/Hindi</p></h3>
+            <h3 style="display: inline-block; margin-left: 40px; width: 15%;">25 & Single by Helly Shah<p style="color: gray; font-weight: 100;">English/Hindi</p></h3>
+            <h3 style="display: inline-block; margin-left: 38px; width: 15%;">The Seduction<p style="color: gray; font-weight: 100;">English/Hindi</p></h3>
+            <h3 style="display: inline-block; margin-left: 30px; width: 15%;">Killer Jeo <p style="color: gray; font-weight: 100;">English</p></h3>
+        </div>
+        <div>
+            <h2 style="margin-left: 155px;">Top Games And Sports Events</h2>
+            <img width="250px" height="380px" style="margin-left: 8%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-TW9uLCAxNiBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00408550-ytjusmstqc-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-V2VkLCAyIE9jdA%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00409087-dveqzwcyhn-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAxNSBTZXA%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00410578-hpzvplvqmb-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCA2IE9jdA%3D%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00338822-hvjeqxaqye-portrait.jpg" alt="error">
+            <img width="250px" height="380px" style="margin-left: 2%;" src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:l-text,ie-U3VuLCAyMCBPY3Q%3D,fs-29,co-FFFFFF,ly-612,lx-24,pa-8_0_0_0,l-end/et00342542-phgwupckzk-portrait.jpg" alt="error">
+            <h3 style="display: inline-block; margin-left: 140px; width: 15%;margin-top: 2px;">Chess Championship (Online) For All Age<p style="color: gray; font-weight: 100;">Your Place & Time: Hyderabad</p></h3>
+            <h3 style="display: inline-block; margin-left: 28px; width: 15%;">Chess Championship (Online) For All Age<p style="color: gray; font-weight: 100;">Your Place & Time: Hyderabad</p></h3>
+            <h3 style="display: inline-block; margin-left: 40px; width: 15%;">3 A Side Football Tournament - Open Age<p style="color: gray; font-weight: 100;">Don Bosco Shrine: Hyderabad</p></h3>
+            <h3 style="display: inline-block; margin-left: 38px; width: 15%;">Mahatma Virtual Marathon - Get Medal by Courier<p style="color: gray; font-weight: 100;">Your Place & Time: Hyderabad</p></h3>
+            <h3 style="display: inline-block; margin-left: 30px; width: 15%;">Hercules Virtual Marathon - Get Medal by Courier<p style="color: gray; font-weight: 100;">Your Place & Time: Hyderabad</p></h3>
+        </div>
+        <div>
+            <h1 style="margin-left: 155px;color: red;">Trending Searches Right Now</h1><br>
+            <h3 class="z1" style="display: inline-block; margin-left: 100px; width: 12%;margin-top: 2px;text-align: center;">Devara Part-1<p style="color: gray; font-weight: 100;">Movies</p></h3>
+            <h3 class="z1" style="display: inline-block; margin-left: 100px; width: 12%;margin-top: 2px;text-align: center;">3(2012)<p style="color: gray; font-weight: 100;">Movies</p></h3>
+            <h3 class="z1" style="display: inline-block; margin-left: 100px; width: 12%;margin-top: 2px;text-align: center;">Mathu Vadalara 2<p style="color: gray; font-weight: 100;">Movies</p></h3>
+            <h3 class="z1" style="display: inline-block; margin-left: 100px; width: 12%;margin-top: 2px;text-align: center;">Tumbaad<p style="color: gray; font-weight: 100;">Movies</p></h3>
+            <h3 class="z1" style="display: inline-block; margin-left: 100px; width: 12%;margin-top: 2px;text-align: center;">Saripodha Shanivaram<p style="color: gray; font-weight: 100;">Movies</p></h3>
+            <h3 class="z1" style="display: inline-block; margin-left: 100px; width: 12%;margin-top: 2px;text-align: center;">Stree 2 - Sarkate ka Aatank<p style="color: gray; font-weight: 100;">Movies</p></h3>
+            <h3 class="z1" style="display: inline-block; margin-left: 100px; width: 12%;margin-top: 2px;text-align: center;">35(2024)<p style="color: gray; font-weight: 100;">Movies</p></h3>
+            <h3 class="z1" style="display: inline-block; margin-left: 100px; width: 12%;margin-top: 2px;text-align: center;">The G.O.A.T<p style="color: gray; font-weight: 100;">Movies</p></h3>
+            <h3 class="z1" style="display: inline-block; margin-left: 100px; width: 12%;margin-top: 2px;text-align: center;">Pushpa - The Rule<p style="color: gray; font-weight: 100;">Movies</p></h3>
+            <h3 class="z1" style="display: inline-block; margin-left: 100px; width: 12%;margin-top: 2px;text-align: center;">Janaki Aithe Ganaka<p style="color: gray; font-weight: 100;">Movies</p></h3><br>
+        </div>
+        <div style="background-color: rgb(40, 43, 53);">
+            <div>
+                <h2 style="margin-left: 100px;display: inline-block;margin-right: 150px;color: white;"><i class="fa fa-home fa-2x homecol"></i>&nbsp;&nbsp;&nbsp;&nbsp;List Your Show !! &nbsp;&nbsp;Got a show,event,activity or a great experience? Partner with us & get listed on BookMyShow</h2>
+                <button style="background-color: orangered;color: white;font-weight: bold;display: inline-block;width: 120px;height: 30px;border-radius: 20px;">Contact Us !</button>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
